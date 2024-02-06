@@ -1,0 +1,15 @@
+python -m pip install --user pipx
+
+python -m pipx ensurepath
+
+pipx install eth-brownie
+
+python -m pip install --user pipx
+
+brownie accounts new agilan-account
+brownie accounts list
+brownie run scripts/deploy.py
+brownie test
+brownie networks list
+
+brownie run scripts/read_value.py --network sepolia
